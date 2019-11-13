@@ -15,6 +15,8 @@
 		953C121C237AD2E200951974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953C121A237AD2E200951974 /* LaunchScreen.storyboard */; };
 		953C1227237AD2E200951974 /* TravisCIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C1226237AD2E200951974 /* TravisCIDemoTests.swift */; };
 		953C1232237AD2E200951974 /* TravisCIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C1231237AD2E200951974 /* TravisCIDemoUITests.swift */; };
+		95407EE2237BE29B0043F7F6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95407EE0237BE29B0043F7F6 /* TestViewController.swift */; };
+		95407EE3237BE29B0043F7F6 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95407EE1237BE29B0043F7F6 /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		953C122D237AD2E200951974 /* TravisCIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravisCIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953C1231237AD2E200951974 /* TravisCIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravisCIDemoUITests.swift; sourceTree = "<group>"; };
 		953C1233237AD2E200951974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95407EE0237BE29B0043F7F6 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		95407EE1237BE29B0043F7F6 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				953C120F237AD2DF00951974 /* AppDelegate.swift */,
 				953C1211237AD2DF00951974 /* SceneDelegate.swift */,
 				953C1213237AD2DF00951974 /* ViewController.swift */,
+				95407EE0237BE29B0043F7F6 /* TestViewController.swift */,
+				95407EE1237BE29B0043F7F6 /* TestViewController.xib */,
 				953C1215237AD2DF00951974 /* Main.storyboard */,
 				953C1218237AD2E200951974 /* Assets.xcassets */,
 				953C121A237AD2E200951974 /* LaunchScreen.storyboard */,
@@ -234,6 +240,7 @@
 			files = (
 				953C121C237AD2E200951974 /* LaunchScreen.storyboard in Resources */,
 				953C1219237AD2E200951974 /* Assets.xcassets in Resources */,
+				95407EE3237BE29B0043F7F6 /* TestViewController.xib in Resources */,
 				953C1217237AD2DF00951974 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +268,7 @@
 			files = (
 				953C1214237AD2DF00951974 /* ViewController.swift in Sources */,
 				953C1210237AD2DF00951974 /* AppDelegate.swift in Sources */,
+				95407EE2237BE29B0043F7F6 /* TestViewController.swift in Sources */,
 				953C1212237AD2DF00951974 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
