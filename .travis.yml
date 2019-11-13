@@ -18,15 +18,12 @@ env:
   
     secure: Yirdq1lSuVa6vVbYyF/Mk1tb+FT8X99fgO0foPRIm5rZ+8kAvi0QaP3zkFkN92EG3HCbuEwnAXxmGaaiG5ElN3nQS04hcPlS4OHbQ3Mfh/U/2uLiEzSI1Llb2MK+WLF+Ss/QZvtRpOIdNs0OCxfqMiDj76h0DxmmUrOtPO+xAQqfd8IvqzcxmlqTumtVXswA2KLbrihVzG5bnnw7GVY+Y1cWv5U7AXyGCgff+jYjd/rT3qX/GKFRDqo1bPlw2WOyGDnJ1sXlz2UrFHYeLBsEWfZiXhlpfD4BArEgThcW6c+ORqZmbS/lLiwFJ3yWaag/RLX0tyjLbuQMDqtZrsFUCsBPGLpmEYoC8/pfEhIKZik48FYrQzJfaJLCkTgLYKdpy3kz/Rb6lrgf4lJNZA+kRP08XIFa4+kcR+cRG/VkhL/K4hoBUc0yDyjeCy+qKL1qspKDB53v0NYFTIvQ2mPmDhc4D8VeQYl+fpZ6NIdLM0SdH0zmFZqF3S6nPLWbpRNfbNuQvmWZmdYLmz84WBpidC2714uXelhDz1zHnfQF0VVOJ5Jt/FYiEO7CZw4tu1jHvw1tW0mjg7Q0O36aIN2eLqcZU7zcnmr9JuibK5A3RocHBRQ+fMN1aXzfKd0DAtfEj6zPoJX+tM3IaVS05Oa2r+zatUThMCqe7lgTRIrUwXQ=
     
-notifications:
-  compfire:
-   rooms:
-  secure: vOTZlH+6ybU83Q27kEJKeCIV3300BhitX4tT3XA6Bsgns/LaNR88dru2szZ0xhl/WEQ5BfpJQ+A3iFXeSNjK+63c/ciLe9C8lNITjnMa41/wpHdzV7C7Vk+ROrzBuSU5vnHZ18M0SOIV8Ti4MpBCxGPSmIFxZeVln7MuoPl+e63M5bHxMRFbPVKhQixCRhKskjFGuDpB5UtO8ibh3bb539qsGAxj/+8YWSqtVYScqNJteTIRF/ukgJGv4CKm4cwRjUd1vlJiEvKEkQdcjs3QHTpnmB70Pv7c3g4uDMXBuEx0LSfEwKPuzn8PTZ+Ow9p5TMqGW/uMbmHVcun5U0sQsrUYqrXydSqmnBC3vPIw1xNTzgP1IKlShS0HdDI5MGi+KnkdtW+Dylcqxe6Utdr+pmBuGpMTvz1D2LV/FoNF44VGvyZOQB1sF0/E80oY+oENervkkTdpoAKvOYIcNCz/8tk+oO1GVS4c1WDmF3WRSCBQl4wjxlc28anD4GbhEDYqmLdo7lrDuryrH3dgHGgvq+W1uwd5QF4nfRVUfS+UTExTDWVjBXvFCtlhrWzwusjp+gKzhRG+4fK1K5nfFj+CdT8OC7sZa3abs/vMMAfRKSHPxUWTqa+rnNJMWGgr53cBaQP2RgVe5P5gj8HvCd4BjS/NrVNBaLiR5zPbFLVWggs=
-
-
+#notifications:
+#  compfire:
+#   rooms:
+#  secure: vOTZlH+6ybU83Q27kEJKeCIV3300BhitX4tT3XA6Bsgns/LaNR88dru2szZ0xhl/WEQ5BfpJQ+A3iFXeSNjK+63c/ciLe9C8lNITjnMa41/wpHdzV7C7Vk+ROrzBuSU5vnHZ18M0SOIV8Ti4MpBCxGPSmIFxZeVln7MuoPl+e63M5bHxMRFbPVKhQixCRhKskjFGuDpB5UtO8ibh3bb539qsGAxj/+8YWSqtVYScqNJteTIRF/ukgJGv4CKm4cwRjUd1vlJiEvKEkQdcjs3QHTpnmB70Pv7c3g4uDMXBuEx0LSfEwKPuzn8PTZ+Ow9p5TMqGW/uMbmHVcun5U0sQsrUYqrXydSqmnBC3vPIw1xNTzgP1IKlShS0HdDI5MGi+KnkdtW+Dylcqxe6Utdr+pmBuGpMTvz1D2LV/FoNF44VGvyZOQB1sF0/E80oY+oENervkkTdpoAKvOYIcNCz/8tk+oO1GVS4c1WDmF3WRSCBQl4wjxlc28anD4GbhEDYqmLdo7lrDuryrH3dgHGgvq+W1uwd5QF4nfRVUfS+UTExTDWVjBXvFCtlhrWzwusjp+gKzhRG+4fK1K5nfFj+CdT8OC7sZa3abs/vMMAfRKSHPxUWTqa+rnNJMWGgr53cBaQP2RgVe5P5gj8HvCd4BjS/NrVNBaLiR5zPbFLVWggs=
 
 before_install:
-
 - brew update
 - brew install beanstalk
 - brew outdated xctool || brew upgrade xctool
@@ -35,7 +32,6 @@ before_install:
 - chmod +x scripts/travis/add-key.sh
 - chmod +x scripts/travis/remove-key.sh
 - chmod +x scripts/travis/sign-and-upload.sh
-
 
 script:
 - xctool -workspace customer-ios.xcworkspace -scheme customer-ios-dev -sdk iphoneos -configuration Release CODE_SIGN_RESOURCE_RULES_PATH='$(SDKROOT)/ResourceRules.plist' OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
