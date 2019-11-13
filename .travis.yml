@@ -6,6 +6,6 @@ xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 8
 before_install:
 - gem install bundler
 - gem install fir-cli
-- fir version
+#- fir version
 after_deploy:
 - fir p Build/Products/Debug-iphonesimulator/TravisCIDemo.app -T 938f564500c3337a9c0037972e924acc -c "`git cat-file tag $TRAVIS_TAG`"
