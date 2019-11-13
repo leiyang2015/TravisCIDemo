@@ -12,4 +12,5 @@ curl -X "POST" "http://api.fir.im/apps" \
      -H "Content-Type: application/json" \
      -d "{\"type\":\"ios\", \"bundle_id\":\"com.bigone.TravisCIDemo\", \"api_token\":\"938f564500c3337a9c0037972e924acc\"}"
 
+
 #- fir p Build/Products/Debug-iphonesimulator/TravisCIDemo.app -T 938f564500c3337a9c0037972e924acc -c "`git cat-file tag $TRAVIS_TAG`"
